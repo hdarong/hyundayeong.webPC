@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>SHEEP COFFEE 1주년 기념으로 맞춤형 케이크 제작 이벤트를 합니다!<br>원하는 옵션을 고르시고 단 하나의 케이크를 제작해 드려요!</p>
+<form action="" id="cakeform" onsubmit="return false;">
+   <fieldset>
+    <legend>SHEEP COFFEE EVENT CAKE</legend>
+    
+    <p>
+    <label >케이크 사이즈</label><br>
+    <input type="radio"  name="cakesize" value="Round6"
+    onclick="calculateTotal()" />
+    도시락 - 지름 10cm (20,000)<br>
+    <input type="radio"  name="cakesize" value="Round8"
+    onclick="calculateTotal()" />
+    미니 - 지름 12cm (25,000)<br>
+    <input type="radio"  name="cakesize" value="Round10"
+    onclick="calculateTotal()" />
+    1호 - 지름 15cm (30,000)<br>
+    <input type="radio"  name="selectedcake" value="Round12"
+    onclick="calculateTotal()" />
+    2호 - 지름 18cm(35,000)
+    </p>
+    
+    
+    <p>
+    <label >케이크 모양</label><br>
+    <input type="radio"  name="selectedcake" value="Round6"
+    onclick="calculateTotal()" />
+    원형 (추가 금액 없음)<br>
+    <input type="radio"  name="selectedcake" value="Round8"
+    onclick="calculateTotal()" />
+    하트 (4,000)
+    </p>
+ 
+    
+    <p>
+    <label >맛 선택(선택 안하시면 기본(생크림+바닐라시트)으로 제작 됩니다.)</label><br>
+    <select id="filling" name='filling'
+    onchange="calculateTotal()">
+    <option value="None">맛을 선택하세요</option>
+    <option value="Lemon">생딸기+생크림+바닐라시트(3,000)</option>
+    <option value="Custard">생키위+생크림+바닐라시트(3,000)</option>
+    <option value="Fuuudge">생망고+생크림+바닐라시트(3,000)</option>
+    <option value="Mocha">청포도+생크림+바닐라시트(3,000)</option>
+    <option value="Pineapple">생파인애플+생크림+바닐라시트(3,000)</option>
+    <option value="Raspberry">로투스+카라멜로투스크림+바닐라시트(2,000)</option>
+    <option value="Fudge">오레오+쿠키치즈크림+초코시트(2,000)</option>
+    <option value="Dobash">초콜릿+누텔라그림+초코시트(2,000)</option>
+    <option value="Mint">민트초콜릿+민트초코크림+초코시트(2,000)</option>
+   </select>
+   </p>
+   
+   
+    <p>
+    <label for='includecandles' class="inlinelabel">
+    곰돌이 초(1,500)</label>
+    <input type="checkbox" id="includecandles" name='includecandles'
+    onclick="calculateTotal()" />
+   </p>
+ 
+    <p>
+    <label class="inlinelabel" for='includeinscription'>
+    레터링 문구(1,000)</label>
+    <input type="checkbox" id="includeinscription"
+    name="includeinscription" onclick="calculateTotal()" />
+ 
+    <input type="text"  id="theinscription"
+    name="theinscription" value="레터링 문구를 입력하세요"  />
+    </p>
+    <div id="totalPrice"></div>
+ 
+    </fieldset>
+</form>
+
+
+</body>
+</html>
+
